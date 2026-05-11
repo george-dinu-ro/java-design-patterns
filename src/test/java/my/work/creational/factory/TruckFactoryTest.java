@@ -9,22 +9,25 @@ import my.work.creational.factory.vehicle.Truck;
 
 class TruckFactoryTest {
 
-	@Test
-	void whenCallBuildVehicle_thenReturnTruck() {
-		var truck = TruckFactory.buildVehicle();
-		truck.startEngine();
-		truck.stopEngine();
+    @Test
+    void whenCallBuildVehicle_thenReturnTruck() {
+        var truck = TruckFactory.buildVehicle();
+        truck.startEngine();
+        truck.stopEngine();
 
-		assertThat(truck).isInstanceOf(Truck.class);
-	}
+        assertThat(truck)
+                .isInstanceOf(Truck.class);
+    }
 
-	@Test
-	void whenCallCreateVehicle_thenReturnTruck() {
-		var truckFactory = new TruckFactory();
-		var truck = truckFactory.createVehicle();
-		truck.startEngine();
-		truck.stopEngine();
+    @Test
+    void whenCallCreateVehicle_thenReturnTruck() {
+        var truckFactory = new TruckFactory();
+        var truck = truckFactory.createVehicle();
+        truck.startEngine();
+        truck.stopEngine();
 
-		assertThat(truck).isInstanceOf(Truck.class);
-	}
+        assertThat(truck)
+                .isInstanceOf(Truck.class);
+    }
+
 }

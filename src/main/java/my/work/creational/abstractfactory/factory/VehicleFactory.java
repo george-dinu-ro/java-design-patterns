@@ -5,7 +5,8 @@ import my.work.creational.abstractfactory.vehicle.thermal.ThermalVehicle;
 
 public interface VehicleFactory {
 
-	ThermalVehicle createThermalVehicle();
+    ThermalVehicle createThermalVehicle();
 
-	ElectricVehicle createElectricVehicle();
+    ElectricVehicle createElectricVehicle();
+
 }

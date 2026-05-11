@@ -1,21 +1,27 @@
 package my.work.creational.singleton;
 
-public class SerializableSingleton implements java.io.Serializable {
+import java.io.Serial;
+import java.io.Serializable;
 
-	private static final long serialVersionUID = 1L;
+public class SerializableSingleton implements Serializable {
 
-	private SerializableSingleton() {
-	}
+    @Serial
+    private static final long serialVersionUID = 1L;
 
-	private static class SingletonHelper {
-		private static final SerializableSingleton INSTANCE = new SerializableSingleton();
-	}
+    private SerializableSingleton() {
+    }
 
-	public static SerializableSingleton getInstance() {
-		return SingletonHelper.INSTANCE;
-	}
+    private static class SingletonHelper {
+        private static final SerializableSingleton INSTANCE = new SerializableSingleton();
+    }
 
-	protected Object readResolve() {
-		return getInstance();
-	}
+    public static SerializableSingleton getInstance() {
+        return SingletonHelper.INSTANCE;
+    }
+
+    @Serial
+    protected Object readResolve() {
+        return getInstance();
+    }
+
 }

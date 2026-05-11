@@ -1,14 +1,20 @@
 package my.work.creational.factory.vehicle;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Truck implements Vehicle {
 
-	@Override
-	public void startEngine() {
-		System.out.println("Truck engine started");
-	}
+    private static final Logger LOGGER = Logger.getLogger(Truck.class.getName());
 
-	@Override
-	public void stopEngine() {
-		System.out.println("Truck engine stopped");
-	}
+    @Override
+    public void startEngine() {
+        LOGGER.log(Level.INFO, "Truck engine started");
+    }
+
+    @Override
+    public void stopEngine() {
+        LOGGER.log(Level.INFO, "Truck engine stopped");
+    }
+
 }

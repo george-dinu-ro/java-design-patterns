@@ -10,28 +10,31 @@ import my.work.creational.abstractfactory.vehicle.thermal.ExpensiveThermalVehicl
 
 class ExpensiveVehicleFactoryTest {
 
-	private static ExpensiveVehicleFactory factory;
+    private static ExpensiveVehicleFactory factory;
 
-	@BeforeAll
-	private static void init() {
-		factory = new ExpensiveVehicleFactory();
-	}
+    @BeforeAll
+    static void init() {
+        factory = new ExpensiveVehicleFactory();
+    }
 
-	@Test
-	void whenCallCreateThermalVehicle_thenReturnExpensiveThermalVehicle() {
-		var vehicle = factory.createThermalVehicle();
-		vehicle.startEngine();
-		vehicle.stopEngine();
+    @Test
+    void whenCallCreateThermalVehicle_thenReturnExpensiveThermalVehicle() {
+        var vehicle = factory.createThermalVehicle();
+        vehicle.startEngine();
+        vehicle.stopEngine();
 
-		assertThat(vehicle).isInstanceOf(ExpensiveThermalVehicle.class);
-	}
+        assertThat(vehicle)
+                .isInstanceOf(ExpensiveThermalVehicle.class);
+    }
 
-	@Test
-	void whenCallCreateElectricVehicle_thenReturnExpensiveElectricVehicle() {
-		var vehicle = factory.createElectricVehicle();
-		vehicle.start();
-		vehicle.stop();
+    @Test
+    void whenCallCreateElectricVehicle_thenReturnExpensiveElectricVehicle() {
+        var vehicle = factory.createElectricVehicle();
+        vehicle.start();
+        vehicle.stop();
 
-		assertThat(vehicle).isInstanceOf(ExpensiveElectricVehicle.class);
-	}
+        assertThat(vehicle)
+                .isInstanceOf(ExpensiveElectricVehicle.class);
+    }
+
 }

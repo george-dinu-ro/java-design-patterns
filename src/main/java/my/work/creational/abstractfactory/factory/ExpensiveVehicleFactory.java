@@ -7,13 +7,14 @@ import my.work.creational.abstractfactory.vehicle.thermal.ThermalVehicle;
 
 public class ExpensiveVehicleFactory implements VehicleFactory {
 
-	@Override
-	public ThermalVehicle createThermalVehicle() {
-		return new ExpensiveThermalVehicle();
-	}
+    @Override
+    public ThermalVehicle createThermalVehicle() {
+        return new ExpensiveThermalVehicle();
+    }
 
-	@Override
-	public ElectricVehicle createElectricVehicle() {
-		return new ExpensiveElectricVehicle();
-	}
+    @Override
+    public ElectricVehicle createElectricVehicle() {
+        return new ExpensiveElectricVehicle();
+    }
+
 }

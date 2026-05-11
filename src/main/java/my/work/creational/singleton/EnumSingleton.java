@@ -1,9 +1,10 @@
 package my.work.creational.singleton;
 
 public enum EnumSingleton {
-	INSTANCE;
+    INSTANCE;
 
-	public static EnumSingleton getInstance() {
-		return INSTANCE;
-	}
+    public static EnumSingleton getInstance() {
+        return INSTANCE;
+    }
+
 }

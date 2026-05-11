@@ -1,14 +1,20 @@
 package my.work.creational.abstractfactory.vehicle.thermal;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class ExpensiveThermalVehicle implements ThermalVehicle {
 
-	@Override
-	public void startEngine() {
-		System.out.println("Expensive thermal vehicle engine started");
-	}
+    private static final Logger LOGGER = Logger.getLogger(ExpensiveThermalVehicle.class.getName());
 
-	@Override
-	public void stopEngine() {
-		System.out.println("Expensive thermal vehicle engine stopped");
-	}
+    @Override
+    public void startEngine() {
+        LOGGER.log(Level.INFO, "Expensive thermal vehicle engine started");
+    }
+
+    @Override
+    public void stopEngine() {
+        LOGGER.log(Level.INFO, "Expensive thermal vehicle engine stopped");
+    }
+
 }

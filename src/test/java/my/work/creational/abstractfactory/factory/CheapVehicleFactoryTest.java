@@ -6,32 +6,35 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import my.work.creational.abstractfactory.vehicle.electric.CheapElectricVehicle;
-import my.work.creational.abstractfactory.vehicle.thermal.CheapTermalVehicle;
+import my.work.creational.abstractfactory.vehicle.thermal.CheapThermalVehicle;
 
 class CheapVehicleFactoryTest {
 
-	private static CheapVehicleFactory factory;
+    private static CheapVehicleFactory factory;
 
-	@BeforeAll
-	private static void init() {
-		factory = new CheapVehicleFactory();
-	}
+    @BeforeAll
+    static void init() {
+        factory = new CheapVehicleFactory();
+    }
 
-	@Test
-	void whenCallCreateThermalVehicle_thenReturnCheapTermalVehicle() {
-		var vehicle = factory.createThermalVehicle();
-		vehicle.startEngine();
-		vehicle.stopEngine();
+    @Test
+    void whenCallCreateThermalVehicle_thenReturnCheapThermalVehicle() {
+        var vehicle = factory.createThermalVehicle();
+        vehicle.startEngine();
+        vehicle.stopEngine();
 
-		assertThat(vehicle).isInstanceOf(CheapTermalVehicle.class);
-	}
+        assertThat(vehicle)
+                .isInstanceOf(CheapThermalVehicle.class);
+    }
 
-	@Test
-	void whenCallCreateElectricVehicle_thenReturnCheapElectricVehicle() {
-		var vehicle = factory.createElectricVehicle();
-		vehicle.start();
-		vehicle.stop();
+    @Test
+    void whenCallCreateElectricVehicle_thenReturnCheapElectricVehicle() {
+        var vehicle = factory.createElectricVehicle();
+        vehicle.start();
+        vehicle.stop();
 
-		assertThat(vehicle).isInstanceOf(CheapElectricVehicle.class);
-	}
+        assertThat(vehicle)
+                .isInstanceOf(CheapElectricVehicle.class);
+    }
+
 }

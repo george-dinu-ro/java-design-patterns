@@ -2,7 +2,8 @@ package my.work.creational.abstractfactory.vehicle.electric;
 
 public interface ElectricVehicle {
 
-	void start();
+    void start();
 
-	void stop();
+    void stop();
+
 }

@@ -9,14 +9,17 @@ import org.junit.jupiter.api.Test;
 
 class EnumSingletonTest {
 
-	@Test
-	void whenCallGetInstanceFromDifferentThreads_thenShouldReturnSameInstance()
-			throws InterruptedException, ExecutionException {
+    @Test
+    void whenCallGetInstanceFromDifferentThreads_thenShouldReturnSameInstance()
+            throws InterruptedException, ExecutionException {
 
-		var executor = Executors.newFixedThreadPool(2);
-		var instance1 = executor.submit(EnumSingleton::getInstance).get();
-		var instance2 = executor.submit(EnumSingleton::getInstance).get();
+        try (var executor = Executors.newFixedThreadPool(2)) {
+            var instance1 = executor.submit(EnumSingleton::getInstance).get();
+            var instance2 = executor.submit(EnumSingleton::getInstance).get();
 
-		assertThat(instance1).isSameAs(instance2);
-	}
+            assertThat(instance1)
+                    .isSameAs(instance2);
+        }
+    }
+
 }

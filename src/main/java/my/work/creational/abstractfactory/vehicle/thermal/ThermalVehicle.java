@@ -2,7 +2,8 @@ package my.work.creational.abstractfactory.vehicle.thermal;
 
 public interface ThermalVehicle {
 
-	void startEngine();
+    void startEngine();
 
-	void stopEngine();
+    void stopEngine();
+
 }

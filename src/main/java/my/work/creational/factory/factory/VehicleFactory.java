@@ -4,5 +4,6 @@ import my.work.creational.factory.vehicle.Vehicle;
 
 public interface VehicleFactory {
 
-	Vehicle createVehicle();
+    Vehicle createVehicle();
+
 }

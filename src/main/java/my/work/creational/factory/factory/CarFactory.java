@@ -5,12 +5,13 @@ import my.work.creational.factory.vehicle.Vehicle;
 
 public class CarFactory implements VehicleFactory {
 
-	public static Vehicle buildVehicle() {
-		return new CarFactory().createVehicle();
-	}
+    public static Vehicle buildVehicle() {
+        return new CarFactory().createVehicle();
+    }
 
-	@Override
-	public Vehicle createVehicle() {
-		return new Car();
-	}
+    @Override
+    public Vehicle createVehicle() {
+        return new Car();
+    }
+
 }

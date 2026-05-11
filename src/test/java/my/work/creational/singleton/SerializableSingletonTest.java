@@ -12,22 +12,22 @@ import org.junit.jupiter.api.Test;
 
 class SerializableSingletonTest {
 
-	@Test
-	void whenDeserializeBeforeSerializedInstance_thenShouldReturnSameInstance()
-			throws IOException, ClassNotFoundException {
+    @Test
+    void whenDeserializeSerializedInstance_thenShouldReturnSameInstance() throws IOException, ClassNotFoundException {
 
-		var instance1 = SerializableSingleton.getInstance();
-		SerializableSingleton instance2 = null;
+        var instance1 = SerializableSingleton.getInstance();
+        SerializableSingleton instance2;
 
-		try (var output = new ObjectOutputStream(new FileOutputStream("file.ser"))) {
-			output.writeObject(instance1);
-		}
+        try (var output = new ObjectOutputStream(new FileOutputStream("file.ser"))) {
+            output.writeObject(instance1);
+        }
 
-		try (var input = new ObjectInputStream(new FileInputStream("file.ser"))) {
-			instance2 = (SerializableSingleton) input.readObject();
+        try (var input = new ObjectInputStream(new FileInputStream("file.ser"))) {
+            instance2 = (SerializableSingleton) input.readObject();
+        }
 
-		}
+        assertThat(instance1)
+                .isSameAs(instance2);
+    }
 
-		assertThat(instance1).isSameAs(instance2);
-	}
 }
