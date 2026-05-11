@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import my.work.creational.factory.factory.CarFactory;
 import my.work.creational.factory.vehicle.Car;
 
-class CarFactoryTest {
+class VehicleFactoryTest {
 
     @Test
     void whenCallBuildVehicle_thenReturnCar() {

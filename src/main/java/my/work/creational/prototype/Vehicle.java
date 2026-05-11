@@ -1,23 +1,35 @@
 package my.work.creational.prototype;
 
-public interface Vehicle {
+public class Vehicle implements Cloneable {
 
-    enum VehicleType {
-        CAR, VAN, TRUCK
+    public enum Type {
+        CAR, TRUCK
     }
 
-    enum Color {
-        RED, GREEN, BLUE, BLACK, WHITE
+    public enum Engine {
+        ECONOMIC, POWERFUL
     }
 
-    enum Engine {
-        PETROL, DIESEL, ELECTRIC
+    public Vehicle(Type type, Engine engine) {
+        this.type = type;
+        this.engine = engine;
     }
 
-    void setEngine(Engine engine);
+    private final Type type;
 
-    void setColor(Color color);
+    private final Engine engine;
 
-    Vehicle clone(Color color);
+    public Type getType() {
+        return type;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    @Override
+    public Vehicle clone() throws CloneNotSupportedException {
+        return (Vehicle) super.clone();
+    }
 
 }

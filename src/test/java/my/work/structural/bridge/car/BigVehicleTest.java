@@ -1,22 +1,22 @@
 package my.work.structural.bridge.car;
 
-import my.work.structural.bridge.engine.EconomicEngine;
+import my.work.structural.bridge.engine.PowerfulEngine;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class SmallCarTest {
+class BigVehicleTest {
 
     @Test
     void whenDescribeCar_thenGetRightElements() {
-        var car = new SmallCar(new EconomicEngine());
+        var car = new BigCar(new PowerfulEngine());
         car.checkEngine();
 
         assertThat(car.getClass())
-                .isEqualTo(SmallCar.class);
+                .isEqualTo(BigCar.class);
 
         assertThat(car.getEngine().getClass())
-                .isEqualTo(EconomicEngine.class);
+                .isEqualTo(PowerfulEngine.class);
     }
 
 }
