@@ -8,20 +8,23 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 class ProxyCommandPromptUsingImplementationTest {
 
-	@ParameterizedTest
-	@MethodSource("my.work.structural.proxy.TestUtils#providingSuccessfulCombinations")
-	void givenSuccessfullCombinations_whenRunExecuteCommand_ThenSuccess(boolean isAdmin, String command) {
-		var proxy = new ProxyCommandPromptUsingImplementation(isAdmin);
-		var result = proxy.executeCommand(command);
+    @ParameterizedTest
+    @MethodSource("my.work.structural.proxy.TestUtils#providingSuccessfulCombinations")
+    void givenSuccessfulCombinations_whenRunExecuteCommand_ThenSuccess(boolean isAdmin, String command) {
+        var proxy = new ProxyCommandPromptUsingImplementation(isAdmin);
+        var result = proxy.executeCommand(command);
 
-		assertThat(result).isTrue();
-	}
+        assertThat(result)
+                .isTrue();
+    }
 
-	@Test
-	void givenRegularUser_whenRunRestrictedCommand_ThenFailure() {
-		var proxy = new ProxyCommandPromptUsingImplementation(false);
-		var result = proxy.executeCommand("rm");
+    @Test
+    void givenRegularUser_whenRunRestrictedCommand_ThenFailure() {
+        var proxy = new ProxyCommandPromptUsingImplementation(false);
+        var result = proxy.executeCommand("rm");
 
-		assertThat(result).isFalse();
-	}
+        assertThat(result)
+                .isFalse();
+    }
+
 }

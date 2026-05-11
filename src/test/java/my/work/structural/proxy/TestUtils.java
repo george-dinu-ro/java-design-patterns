@@ -6,10 +6,11 @@ import org.junit.jupiter.params.provider.Arguments;
 
 class TestUtils {
 
-	static Stream<Arguments> providingSuccessfulCombinations() {
-		return Stream.of(
-				Arguments.of(false, "ls"), 
-				Arguments.of(true, "ls"), 
-				Arguments.of(true, "rm"));
-	}
+    static Stream<Arguments> providingSuccessfulCombinations() {
+        return Stream.of(
+                Arguments.of(false, "ls"),
+                Arguments.of(true, "ls"),
+                Arguments.of(true, "rm"));
+    }
+
 }

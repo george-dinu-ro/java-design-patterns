@@ -1,11 +1,17 @@
 package my.work.structural.proxy;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class RegularCommandPrompt implements Console {
 
-	@Override
-	public boolean executeCommand(String command) {
-		System.out.println("Executing command: " + command);
+    private static final Logger LOGGER = Logger.getLogger(RegularCommandPrompt.class.getName());
 
-		return true;
-	}
+    @Override
+    public boolean executeCommand(String command) {
+        LOGGER.log(Level.INFO, () -> "Executing command: " + command);
+
+        return true;
+    }
+
 }

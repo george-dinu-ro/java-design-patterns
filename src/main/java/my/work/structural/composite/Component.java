@@ -2,7 +2,8 @@ package my.work.structural.composite;
 
 public interface Component {
 
-	String getName();
+    String getName();
 
-	String getDescription();
+    String getDescription();
+
 }
