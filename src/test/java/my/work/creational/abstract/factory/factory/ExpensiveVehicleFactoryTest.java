@@ -10,11 +10,11 @@ import my.work.creational.abstractfactory.vehicle.thermal.ExpensiveThermalVehicl
 
 class ExpensiveVehicleFactoryTest {
 
-    private static ExpensiveVehicleFactory factory;
+    private static my.work.creational.abstractfactory.factory.ExpensiveVehicleFactory factory;
 
     @BeforeAll
     static void init() {
-        factory = new ExpensiveVehicleFactory();
+        factory = new my.work.creational.abstractfactory.factory.ExpensiveVehicleFactory();
     }
 
     @Test

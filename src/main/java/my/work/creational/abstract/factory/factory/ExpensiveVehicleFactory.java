@@ -5,7 +5,7 @@ import my.work.creational.abstractfactory.vehicle.electric.ExpensiveElectricVehi
 import my.work.creational.abstractfactory.vehicle.thermal.ExpensiveThermalVehicle;
 import my.work.creational.abstractfactory.vehicle.thermal.ThermalVehicle;
 
-public class ExpensiveVehicleFactory implements VehicleFactory {
+public class ExpensiveVehicleFactory implements my.work.creational.abstractfactory.factory.VehicleFactory {
 
     @Override
     public ThermalVehicle createThermalVehicle() {

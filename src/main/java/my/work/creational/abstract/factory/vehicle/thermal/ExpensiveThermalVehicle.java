@@ -3,7 +3,7 @@ package my.work.creational.abstractfactory.vehicle.thermal;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ExpensiveThermalVehicle implements ThermalVehicle {
+public class ExpensiveThermalVehicle implements my.work.creational.abstractfactory.vehicle.thermal.ThermalVehicle {
 
     private static final Logger LOGGER = Logger.getLogger(ExpensiveThermalVehicle.class.getName());
 
