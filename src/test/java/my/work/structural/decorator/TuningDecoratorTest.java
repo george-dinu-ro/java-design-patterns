@@ -14,6 +14,9 @@ class TuningDecoratorTest {
 
         assertThat(decorated.getOriginalCar())
                 .isEqualTo(original);
+
+        assertThat(decorated)
+                .isInstanceOf(TuningDecorator.class);
     }
 
 }
