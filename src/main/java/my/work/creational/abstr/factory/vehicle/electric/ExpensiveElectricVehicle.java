@@ -1,9 +1,9 @@
-package my.work.creational.abstractfactory.vehicle.electric;
+package my.work.creational.abstr.factory.vehicle.electric;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ExpensiveElectricVehicle implements my.work.creational.abstractfactory.vehicle.electric.ElectricVehicle {
+public class ExpensiveElectricVehicle implements ElectricVehicle {
 
     private static final Logger LOGGER = Logger.getLogger(ExpensiveElectricVehicle.class.getName());
 

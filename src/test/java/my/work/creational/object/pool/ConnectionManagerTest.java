@@ -17,7 +17,7 @@ class ConnectionManagerTest {
     }
 
     @Test
-    void givenNotAvailableConnectionsAndNotUsedConnections_whenCallGetConnection_thenCreateNewConnection() {
+    void givenNotAvailableConnectionsAndNotUsedConnections_whenCallGetConnection_thenCreateAndGetANewConnection() {
         var connection = connectionManager.getConnection();
 
         assertThat(connection)
@@ -39,7 +39,7 @@ class ConnectionManagerTest {
     }
 
     @Test
-    void givenNotAvailableConnectionsAndSomeUsedConnections_whenCallGetConnection_thenCreateNewConnection() {
+    void givenNotAvailableConnectionsAndSomeUsedConnections_whenCallGetConnection_thenCreateAndGetANewConnection() {
         connectionManager.getConnection();
         connectionManager.getConnection();
         connectionManager.getConnection();

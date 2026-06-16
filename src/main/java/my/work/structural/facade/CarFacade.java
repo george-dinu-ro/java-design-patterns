@@ -44,9 +44,7 @@ public class CarFacade {
     }
 
     private boolean canBeStarted(Battery battery, Oil oil, Water water) {
-        return (battery.isChecked()
-                && oil.isChecked()
-                && water.isChecked());
+        return (battery.isChecked() && oil.isChecked() && water.isChecked());
     }
 
 }

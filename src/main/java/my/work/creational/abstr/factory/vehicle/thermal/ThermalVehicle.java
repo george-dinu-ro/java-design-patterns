@@ -1,4 +1,4 @@
-package my.work.creational.abstractfactory.vehicle.thermal;
+package my.work.creational.abstr.factory.vehicle.thermal;
 
 public interface ThermalVehicle {
 

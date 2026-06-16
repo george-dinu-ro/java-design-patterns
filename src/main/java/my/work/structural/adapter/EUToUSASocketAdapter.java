@@ -10,7 +10,7 @@ public class EUToUSASocketAdapter implements USASocket {
 
     @Override
     public int getVoltage() {
-        return ((euSocket.getVoltage() - 10) / 2);
+        return ((euSocket.getVoltage() + 10) / 2);
     }
 
 }

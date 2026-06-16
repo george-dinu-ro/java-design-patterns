@@ -12,7 +12,7 @@ public class ConnectionManager {
     private final List<Connection> usedConnections = new ArrayList<>();
 
     public synchronized Connection getConnection() {
-        return isConnectionAvailable() ? getAvailableConnection() : createNewConnection();
+        return isConnectionAvailable() ? getAnAvailableConnection() : createAndGetANewConnection();
     }
 
     public synchronized void releaseConnection(Connection connection) {
@@ -35,22 +35,22 @@ public class ConnectionManager {
         return !availableConnections.isEmpty();
     }
 
-    private Connection getAvailableConnection() {
+    private Connection getAnAvailableConnection() {
         var connection = availableConnections.removeLast();
         usedConnections.add(connection);
 
         return connection;
     }
 
-    private Connection createNewConnection() {
-        return isConnectionLimitReached() ? null : createConnection();
+    private Connection createAndGetANewConnection() {
+        return isConnectionLimitReached() ? null : createAndGetAConnection();
     }
 
     private boolean isConnectionLimitReached() {
         return ((usedConnections.size() + availableConnections.size()) >= MAX_CONNECTIONS_NUMBER);
     }
 
-    private Connection createConnection() {
+    private Connection createAndGetAConnection() {
         var connection = new Connection();
         usedConnections.add(connection);
 

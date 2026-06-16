@@ -1,4 +1,4 @@
-package my.work.creational.abstractfactory.vehicle.electric;
+package my.work.creational.abstr.factory.vehicle.electric;
 
 public interface ElectricVehicle {
 

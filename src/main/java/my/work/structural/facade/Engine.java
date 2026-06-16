@@ -2,14 +2,14 @@ package my.work.structural.facade;
 
 public class Engine {
 
-    private boolean isRunning;
+    private boolean isStarted;
 
     public void start() {
-        this.isRunning = true;
+        this.isStarted = true;
     }
 
     public boolean isStarted() {
-        return this.isRunning;
+        return this.isStarted;
     }
 
 }

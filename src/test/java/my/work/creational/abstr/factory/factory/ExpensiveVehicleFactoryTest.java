@@ -1,20 +1,20 @@
-package my.work.creational.abstractfactory.factory;
+package my.work.creational.abstr.factory.factory;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import my.work.creational.abstractfactory.vehicle.electric.ExpensiveElectricVehicle;
-import my.work.creational.abstractfactory.vehicle.thermal.ExpensiveThermalVehicle;
+import my.work.creational.abstr.factory.vehicle.electric.ExpensiveElectricVehicle;
+import my.work.creational.abstr.factory.vehicle.thermal.ExpensiveThermalVehicle;
 
 class ExpensiveVehicleFactoryTest {
 
-    private static my.work.creational.abstractfactory.factory.ExpensiveVehicleFactory factory;
+    private static ExpensiveVehicleFactory factory;
 
     @BeforeAll
     static void init() {
-        factory = new my.work.creational.abstractfactory.factory.ExpensiveVehicleFactory();
+        factory = new ExpensiveVehicleFactory();
     }
 
     @Test

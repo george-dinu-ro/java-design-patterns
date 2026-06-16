@@ -1,9 +1,9 @@
-package my.work.creational.abstractfactory.vehicle.thermal;
+package my.work.creational.abstr.factory.vehicle.thermal;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ExpensiveThermalVehicle implements my.work.creational.abstractfactory.vehicle.thermal.ThermalVehicle {
+public class ExpensiveThermalVehicle implements ThermalVehicle {
 
     private static final Logger LOGGER = Logger.getLogger(ExpensiveThermalVehicle.class.getName());
 
