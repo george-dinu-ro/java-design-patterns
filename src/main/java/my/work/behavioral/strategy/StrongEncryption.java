@@ -1,7 +1,5 @@
 package my.work.behavioral.strategy;
 
-import my.work.behavioral.EncryptionAlgorithm;
-
 import java.util.UUID;
 
 public class StrongEncryption implements EncryptionAlgorithm {

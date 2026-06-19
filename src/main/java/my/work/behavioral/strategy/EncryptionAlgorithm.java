@@ -1,4 +1,4 @@
-package my.work.behavioral;
+package my.work.behavioral.strategy;
 
 public interface EncryptionAlgorithm {
 
