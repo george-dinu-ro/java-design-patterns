@@ -2,10 +2,10 @@ package my.work.behavioral.strategy;
 
 import java.util.UUID;
 
-public class StrongEncryption implements EncryptionAlgorithm {
+public class StrongRandomGenerator implements RandomGeneratorAlgorithm {
 
     @Override
-    public String encrypt(String message) {
+    public String generate() {
         try {
             Thread.sleep(500);
             return "strong".concat(UUID.randomUUID().toString());
